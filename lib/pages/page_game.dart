@@ -7,6 +7,7 @@ import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:jeux/controllers/game_cont.dart';
 import 'package:jeux/pages/page_main.dart';
 import 'package:jeux/utils/colors.dart';
+import 'package:jeux/utils/dimensions.dart';
 import 'package:jeux/widgets/big_text.dart';
 import 'package:jeux/widgets/small_text.dart';
 
@@ -29,7 +30,7 @@ class _PageGameState extends State<PageGame> {
               return Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 50 , left: 40 , right: 40),
+                    margin: EdgeInsets.only(top: Dimensions.height10*5 , left: Dimensions.height10*4 , right:  Dimensions.height10*4),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -37,9 +38,9 @@ class _PageGameState extends State<PageGame> {
                           children: [
                             BigText(text: "You",),
                             Container(
-                              padding: EdgeInsets.only(top:20 , left: 20 , right: 20 , bottom: 20),
+                              padding: EdgeInsets.only(top: Dimensions.height20 , left: Dimensions.height20 , right: Dimensions.height20 , bottom: Dimensions.height20),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(Dimensions.radius20),
                                 color: Colors.white,
                                               ),
                                               child: BigText(text: game.nbG.toString()),
@@ -50,9 +51,9 @@ class _PageGameState extends State<PageGame> {
                           children: [
                             BigText(text: "Robot",),
                             Container(
-                              padding: EdgeInsets.only(top:20 , left: 20 , right: 20 , bottom: 20),
+                              padding: EdgeInsets.only(top:Dimensions.height20 , left: Dimensions.height20 , right: Dimensions.height20 , bottom: Dimensions.height20),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(Dimensions.radius20),
                                 color: Colors.white,
                                               ),
                                               child: BigText(text: game.nbR.toString() ),
@@ -63,11 +64,11 @@ class _PageGameState extends State<PageGame> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 20),
+                    margin: EdgeInsets.only(top: Dimensions.height20),
                     child: BigText(text:"Robet"),
                     ),
                   Container(
-                    margin: EdgeInsets.only(top: 30 , bottom: 10),
+                    margin: EdgeInsets.only(top: Dimensions.height30 , bottom: Dimensions.height10),
                     child: Column(
                       children: [
                         Row(
@@ -76,8 +77,8 @@ class _PageGameState extends State<PageGame> {
                             Column(
                               children: [
                                 Container(
-                                  width: 80,
-                                  height: 80,
+                                  width: Dimensions.width20*2,
+                                  height: Dimensions.height20*2,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
@@ -89,8 +90,8 @@ class _PageGameState extends State<PageGame> {
                                       decoration: BoxDecoration(
                                         color: AppColors.mainColor,
                                         borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(5) ,
-                                          topRight: Radius.circular(5) ,
+                                          topLeft: Radius.circular(Dimensions.radius5) ,
+                                          topRight: Radius.circular(Dimensions.radius5) ,
                                         ),
                                       ),
                                       height: 3.0,
@@ -101,8 +102,8 @@ class _PageGameState extends State<PageGame> {
                             Column(
                               children: [
                                 Container(
-                                  width: 80,
-                                  height: 80,
+                                  width: Dimensions.width20*2,
+                                  height: Dimensions.height20*2,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
@@ -114,8 +115,8 @@ class _PageGameState extends State<PageGame> {
                                       decoration: BoxDecoration(
                                         color: AppColors.mainColor,
                                         borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(5) ,
-                                          topRight: Radius.circular(5) ,
+                                          topLeft: Radius.circular(Dimensions.radius5) ,
+                                          topRight: Radius.circular(Dimensions.radius5) ,
                                         ),
                                       ),
                                       height: 3.0,
@@ -126,8 +127,8 @@ class _PageGameState extends State<PageGame> {
                             Column(
                               children: [
                                 Container(
-                                  width: 50,
-                                  height: 80,
+                                  width: Dimensions.height10*5,
+                                  height: Dimensions.height20*4,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
@@ -139,8 +140,8 @@ class _PageGameState extends State<PageGame> {
                                       decoration: BoxDecoration(
                                         color: AppColors.mainColor,
                                         borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(5) ,
-                                          topRight: Radius.circular(5) ,
+                                          topLeft: Radius.circular(Dimensions.radius5) ,
+                                          topRight: Radius.circular(Dimensions.radius5) ,
                                         ),
                                       ),
                                       height: 3.0,
@@ -150,7 +151,7 @@ class _PageGameState extends State<PageGame> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 100,),
+                        SizedBox(height: Dimensions.height10*10,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -166,8 +167,8 @@ class _PageGameState extends State<PageGame> {
                               child :Column(
                                 children: [
                                   Container(
-                                    width: 80,
-                                    height: 80,
+                                    width: Dimensions.width20*2,
+                                  height: Dimensions.height20*2,
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                         fit: BoxFit.cover,
@@ -176,12 +177,12 @@ class _PageGameState extends State<PageGame> {
                                     ),
                                   ),
                                   game.selectedButton == 0?Container(
-                                    margin: EdgeInsets.only(top: 5),
+                                    margin: EdgeInsets.only(top: Dimensions.height5),
                                   decoration: BoxDecoration(
                                     color: AppColors.mainColor,
                                     borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(5) ,
-                                      topRight: Radius.circular(5) ,
+                                      topLeft: Radius.circular(Dimensions.radius5) ,
+                                      topRight: Radius.circular(Dimensions.radius5) ,
                                     ),
                                   ),
                                   height: 3.0,
@@ -202,8 +203,8 @@ class _PageGameState extends State<PageGame> {
                               child: Column(
                                 children: [
                                   Container(
-                                  width: 80,
-                                  height: 80,
+                                  width: Dimensions.width20*2,
+                                  height: Dimensions.height20*2,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
@@ -212,12 +213,12 @@ class _PageGameState extends State<PageGame> {
                                   ),
                                    ),
                                   game.selectedButton == 1?Container(
-                                  margin: EdgeInsets.only(top: 5),
+                                  margin: EdgeInsets.only(top: Dimensions.height5),
                                   decoration: BoxDecoration(
                                     color: AppColors.mainColor,
                                     borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(5) ,
-                                      topRight: Radius.circular(5) ,
+                                      topLeft: Radius.circular(Dimensions.radius5) ,
+                                      topRight: Radius.circular(Dimensions.radius5) ,
                                     ),
                                   ),
                                   height: 3.0,
@@ -239,8 +240,8 @@ class _PageGameState extends State<PageGame> {
                               child :Column(
                                 children: [
                                   Container(
-                                  width: 50,
-                                  height: 80,
+                                 width: Dimensions.height10*5,
+                                  height: Dimensions.height20*4,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       fit: BoxFit.cover,
@@ -249,12 +250,12 @@ class _PageGameState extends State<PageGame> {
                                   ),
                                                               ),
                                   game.selectedButton == 2?Container(
-                                    margin: EdgeInsets.only(top: 5),
+                                    margin: EdgeInsets.only(top: Dimensions.height5),
                                   decoration: BoxDecoration(
                                     color: AppColors.mainColor,
                                     borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(5) ,
-                                      topRight: Radius.circular(5) ,
+                                      topLeft: Radius.circular(Dimensions.radius5) ,
+                                      topRight: Radius.circular(Dimensions.radius5) ,
                                     ),
                                   ),
                                   height: 3.0,
@@ -269,11 +270,11 @@ class _PageGameState extends State<PageGame> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 20),
+                    margin: EdgeInsets.only(top: Dimensions.height20),
                     child: BigText(text:"You"),
                     ),
                     Container(
-                    margin: EdgeInsets.only(top: 40 ),
+                    margin: EdgeInsets.only(top: Dimensions.height20*2 ),
                     child: BigText(text:game.message  , color: game.lost==0?AppColors.mainColor:game.lost==1?Colors.greenAccent:Colors.redAccent,),
                     ),
                   Row(
@@ -282,11 +283,11 @@ class _PageGameState extends State<PageGame> {
                       GestureDetector(
                         onTap: () => game.replay(),
                         child: Container(
-                          margin: EdgeInsets.only(top: 40),
-                          padding: EdgeInsets.only(left: 50 , right: 50 , top: 15 , bottom: 15),
+                          margin: EdgeInsets.only(top: Dimensions.height20*2),
+                          padding: EdgeInsets.only(left: Dimensions.width10*5 , right: Dimensions.width10*5 , top: Dimensions.height15 , bottom: Dimensions.height15),
                           decoration: BoxDecoration(
                             color: AppColors.mainColor,
-                            borderRadius: BorderRadius.circular(15),
+                            borderRadius: BorderRadius.circular(Dimensions.radius15),
                         
                           ),
                           child: SmallText(text: "Replay", color: AppColors.mainBlackColor,),
@@ -297,11 +298,11 @@ class _PageGameState extends State<PageGame> {
                           Get.to(PageMain());
                         },
                          child: Container(
-                          margin: EdgeInsets.only(top: 40),
-                          padding: EdgeInsets.only(left: 20 , right: 20 , top: 15 , bottom: 15),
+                          margin: EdgeInsets.only(top: Dimensions.height20*2),
+                          padding: EdgeInsets.only(left: Dimensions.width20 , right: Dimensions.width20 , top: Dimensions.height15 , bottom: Dimensions.height15),
                           decoration: BoxDecoration(
                             color: AppColors.mainColor,
-                            borderRadius: BorderRadius.circular(15),
+                            borderRadius: BorderRadius.circular(Dimensions.radius15),
                                                
                           ),
                           child: SmallText(text: "Go back to Main page" , color :AppColors.mainBlackColor),
